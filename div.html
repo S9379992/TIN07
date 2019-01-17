@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Division</title>
+    <style>
+                 body {
+                    line-height: 1.4;
+                
+                }
+
+                section {
+                    display: flex;
+                    height: 100vh;
+                }
+
+                form {
+                    width: 50%;
+                    margin: auto;
+                    background-color: #eff0f1;
+                }
+
+                legend{
+                    float: left;
+                    font-size: 2.5em;
+                    margin-top: 4%;
+                    padding-left: 3%;
+                    margin-bottom: 4%;
+                    color: #e39a08;
+                }
+
+                input[type=number], input[type=submit]{
+                    width: 94%;
+                    padding: 12px 20px;
+                    background-color: #f5fafa;
+                    margin: 0% 0% 3% 3%;
+                    box-sizing: border-box;
+                }
+
+                input[type=submit]{
+                    background-color: #e39a08;
+                    color: white;
+                }
+                p{
+                   
+                    font-size: 1.5em;
+                    margin-top: 2%;
+                    padding-left: 3%;
+                    margin-bottom: 4%;
+                    text-align: center; 
+                    color: #e39a08;
+                }
+    </style>
+</head>
+
+<body>
+    <form name="formulier">
+        <fieldset>
+            <legend>Simple Calculator</legend>
+            <input type="number" placeholder=" Write here the first number *" name="getal1" required />
+            <p>devided by </p>
+            <input type="number" placeholder="Write here the second number *" name="getal2" required />
+            <input type="submit" value="calculate" onClick="divide(); return false;">
+        </fieldset>
+        <p id="uitkomst"></p>
+    </form>
+
+    <script> 
+        function divide(){
+            var intGetal1 = Number(document.formulier.getal1.value);
+            var intGetal2 = Number(document.formulier.getal2.value);
+            var result = intGetal1 / intGetal2;
+            document.getElementById("uitkomst").innerHTML = "The answer is " + result + ".";
+    }; 
+    </script>
+
+
+</body>
+
+</html>
